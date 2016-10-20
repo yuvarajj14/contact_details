@@ -1,0 +1,31 @@
+<p>
+  <strong>Name:</strong>
+  <%= @contact_detail.name %>
+</p>
+ 
+<p>
+  <strong>Email:</strong>
+  <%= @contact_detail.email %>
+</p>
+
+<% if @contact_detail.addresses.present? %>
+  <ol>
+  <h3>Addresses</h3>
+  <% for address in @contact_detail.addresses %>
+    <li><%=h address.address_line %></li>
+  <% end %>
+  </ol>
+<% else %>  
+  <h4>No Addresses to display</h4>
+<% end %>  
+
+<% if @contact_detail.phone_numbers.present? %>
+  <h3>Phone Numbers</h3>
+  <ol>
+  <% for phone_number in @contact_detail.phone_numbers %>
+    <li><%=h phone_number.mobile_number %></li>
+  <% end %>
+  </ol>
+<% else %>  
+  <h4>No Phone Numbers to display</h4>
+<% end %>   

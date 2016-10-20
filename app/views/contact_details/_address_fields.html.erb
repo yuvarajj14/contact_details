@@ -1,0 +1,7 @@
+<p class="fields">
+  <%= f.label :address_line %><br />
+  <%= f.text_area :address_line, :rows => 3, :cols =>32 %><br />
+  <%= f.check_box :primary_address %>
+  <%= f.label "Primary Address" %><br />
+  <%= link_to_remove_fields "Remove Address ", f %>
+</p>
